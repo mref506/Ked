@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Cheap Airtime </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Spinning Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="spinner-container">
+                <div class="spinner">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                </div>
+                <div class="loading-text">Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <span>kredoswift</span>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="airtime.html" class="active">Buy Cheap Airtime</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="help.html">Help Center</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn">Login</button>
+                <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Mobile Sidebar Navigation -->
+            <div class="mobile-sidebar" id="mobile-sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <span>kredoswift</span>
+                    </div>
+                    <span class="close-sidebar">&times;</span>
+                </div>
+                <div class="sidebar-menu">
+                    <a href="index.html">Home</a>
+                    <a href="airtime.html" class="active">Buy Cheap Airtime</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="help.html">Help Center</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="sidebar-auth">
+                    <button class="btn btn-outline" id="mobileLoginBtn">Login</button>
+                    <button class="btn btn-primary" id="mobileSignupBtn">Sign Up</button>
+                </div>
+            </div>
+            
+            <!-- Mobile Sidebar Overlay -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </nav>
+
+        <!-- Airtime Section -->
+        <section class="airtime-section">
+            <h1 class="section-title-center">Buy Cheap Airtime</h1>
+            <p class="intro" style="text-align: center;">Get a 10% discount on all airtime purchases. Pay less, receive more!</p>
+            
+            <div class="airtime-tabs">
+                <div class="airtime-tab active" data-tab="safaricom">Safaricom Airtime</div>
+                <div class="airtime-tab" data-tab="airtel">Airtel Airtime</div>
+                <div class="airtime-tab" data-tab="bonga">Bonga Points</div>
+            </div>
+            
+            <div class="airtime-content active" id="safaricom-content">
+                <div class="airtime-card">
+                    <h3>Safaricom Airtime Calculator</h3>
+                    <div class="input-group">
+                        <label for="safaricom-amount">Amount Paid (KES)</label>
+                        <input type="number" id="safaricom-amount" placeholder="Enter amount" min="10">
+                    </div>
+                    
+                    <div class="result-container">
+                        <div class="result-label">
+                            <span>Airtime Given</span>
+                            <div class="action-buttons">
+                                <button class="action-button" id="safaricom-copy"><i class="far fa-copy"></i> Copy</button>
+                                <button class="action-button" id="safaricom-edit"><i class="far fa-edit"></i> Edit</button>
+                            </div>
+                        </div>
+                        <div class="result-value" id="safaricom-result">0 KES</div>
+                    </div>
+                    
+                    <div class="discount-message">
+                        <i class="fas fa-tags"></i> You're getting a 10% Discount — pay less, receive more!
+                    </div>
+                    
+                    <button class="btn btn-primary" style="width: 100%;">Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="airtime-content" id="airtel-content">
+                <div class="airtime-card">
+                    <h3>Airtel Airtime Calculator</h3>
+                    <div class="input-group">
+                        <label for="airtel-amount">Amount Paid (KES)</label>
+                        <input type="number" id="airtel-amount" placeholder="Enter amount" min="10">
+                    </div>
+                    
+                    <div class="result-container">
+                        <div class="result-label">
+                            <span>Airtime Given</span>
+                            <div class="action-buttons">
+                                <button class="action-button" id="airtel-copy"><i class="far fa-copy"></i> Copy</button>
+                                <button class="action-button" id="airtel-edit"><i class="far fa-edit"></i> Edit</button>
+                            </div>
+                        </div>
+                        <div class="result-value" id="airtel-result">0 KES</div>
+                    </div>
+                    
+                    <div class="discount-message">
+                        <i class="fas fa-tags"></i> You're getting a 10% Discount — pay less, receive more!
+                    </div>
+                    
+                    <button class="btn btn-primary" style="width: 100%;">Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="airtime-content" id="bonga-content">
+                <div class="airtime-card">
+                    <h3>Bonga Points Calculator</h3>
+                    <div class="input-group">
+                        <label for="bonga-amount">Amount Paid (KES)</label>
+                        <input type="number" id="bonga-amount" placeholder="Enter amount" min="10">
+                    </div>
+                    
+                    <div class="result-container">
+                        <div class="result-label">
+                            <span>Bonga Points Given</span>
+                            <div class="action-buttons">
+                                <button class="action-button" id="bonga-copy"><i class="far fa-copy"></i> Copy</button>
+                                <button class="action-button" id="bonga-edit"><i class="far fa-edit"></i> Edit</button>
+                            </div>
+                        </div>
+                        <div class="result-value" id="bonga-result">0 Points</div>
+                    </div>
+                    
+                    <div class="discount-message">
+                        <i class="fas fa-tags"></i> You're getting a 10% Discount — pay less, receive more!
+                    </div>
+                    
+                    <button class="btn btn-primary" style="width: 100%;">Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>kredoswift</span>
+                    <p>Modern Digital Finance Solutions</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                        
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Legal</h4>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Support</h4>
+                        <a href="help.html">Help Center</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Kredoswift. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to Your Account</h3>
+                <span class="close-modal" id="closeLoginModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" class="modal-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="modal-input" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button class="btn btn-primary btn-block">Login</button>
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="social-login-buttons">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="switch-auth">
+                    <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create an Account</h3>
+                <span class="close-modal" id="closeSignupModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" class="modal-input" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" class="modal-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signupPhone">Phone Number</label>
+                    <input type="tel" id="signupPhone" class="modal-input" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" class="modal-input" placeholder="Create a password">
+                </div>
+                <button class="btn btn-primary btn-block">Sign Up</button>
+                <div class="social-login">
+                    <p>Or sign up with</p>
+                    <div class="social-login-buttons">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="switch-auth">
+                    <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tabs functionality
+            const tabs = document.querySelectorAll('.airtime-tab');
+            const contents = document.querySelectorAll('.airtime-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabId = tab.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    tab.classList.add('active');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+            
+            // Calculator functionality
+            function setupCalculator(provider) {
+                const input = document.getElementById(`${provider}-amount`);
+                const result = document.getElementById(`${provider}-result`);
+                const copyBtn = document.getElementById(`${provider}-copy`);
+                const editBtn = document.getElementById(`${provider}-edit`);
+                
+                // Calculate result on input change
+                input.addEventListener('input', () => {
+                    const amountPaid = parseFloat(input.value) || 0;
+                    const airtimeGiven = (amountPaid / 0.9).toFixed(2);
+                    
+                    if (provider === 'bonga') {
+                        result.textContent = `${airtimeGiven} Points`;
+                    } else {
+                        result.textContent = `${airtimeGiven} KES`;
+                    }
+                });
+                
+                // Copy result to clipboard
+                copyBtn.addEventListener('click', () => {
+                    const textToCopy = result.textContent;
+                    navigator.clipboard.writeText(textToCopy)
+                        .then(() => {
+                            Swal.fire({
+                                title: "Copied!",
+                                text: "Value copied to clipboard",
+                                icon: "success",
+                                timer: 1500,
+                                showConfirmButton: false
+                            });
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy: ', err);
+                        });
+                });
+                
+                // Edit input
+                editBtn.addEventListener('click', () => {
+                    input.focus();
+                });
+            }
+            
+            // Setup calculators for each provider
+            setupCalculator('safaricom');
+            setupCalculator('airtel');
+            setupCalculator('bonga');
+        });
+    </script>
+</body>
+</html>

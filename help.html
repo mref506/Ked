@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <!-- Spinning Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="spinner-container">
+                <div class="spinner">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                </div>
+                <div class="loading-text">Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <span>kredoswift</span>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="airtime.html">Buy Cheap Airtime</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="help.html" class="active">Help Center</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn">Login</button>
+                <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Mobile Sidebar Navigation -->
+            <div class="mobile-sidebar" id="mobile-sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <span>kredoswift</span>
+                    </div>
+                    <span class="close-sidebar">&times;</span>
+                </div>
+                <div class="sidebar-menu">
+                    <a href="index.html">Home</a>
+                    <a href="airtime.html">Buy Cheap Airtime</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="help.html" class="active">Help Center</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="sidebar-auth">
+                    <button class="btn btn-outline" id="mobileLoginBtn">Login</button>
+                    <button class="btn btn-primary" id="mobileSignupBtn">Sign Up</button>
+                </div>
+            </div>
+            
+            <!-- Mobile Sidebar Overlay -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="gradient-heading">Help Center</h1>
+            <p class="page-subtitle">Get answers to your questions and learn how to use Kredoswift</p>
+        </div>
+
+        <!-- Help Search Section -->
+        <div class="help-search-section">
+            <div class="help-search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search for help articles..." class="help-search-input">
+                <button class="btn btn-primary help-search-button">Search</button>
+            </div>
+        </div>
+
+        <!-- Help Categories -->
+        <div class="help-categories">
+            <div class="help-category">
+                <div class="category-icon">
+                    <i class="fas fa-sign-in-alt"></i>
+                </div>
+                <h3>Getting Started</h3>
+                <ul class="help-links">
+                    <li><a href="#" class="help-link">Creating an Account</a></li>
+                    <li><a href="#" class="help-link">Verifying Your Phone Number</a></li>
+                    <li><a href="#" class="help-link">Understanding Our Services</a></li>
+                    <li><a href="#" class="help-link">First Transaction Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="help-category">
+                <div class="category-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h3>Transactions</h3>
+                <ul class="help-links">
+                    <li><a href="#" class="help-link">Converting Airtime to M-Pesa</a></li>
+                    <li><a href="#" class="help-link">Converting Bonga Points</a></li>
+                    <li><a href="#" class="help-link">Buying Discounted Airtime</a></li>
+                    <li><a href="#" class="help-link">Transaction Fees Explained</a></li>
+                </ul>
+            </div>
+
+            <div class="help-category">
+                <div class="category-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Account & Security</h3>
+                <ul class="help-links">
+                    <li><a href="#" class="help-link">Changing Your Password</a></li>
+                    <li><a href="#" class="help-link">Two-Factor Authentication</a></li>
+                    <li><a href="#" class="help-link">Managing Payment Methods</a></li>
+                    <li><a href="#" class="help-link">Privacy & Security Tips</a></li>
+                </ul>
+            </div>
+
+            <div class="help-category">
+                <div class="category-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Troubleshooting</h3>
+                <ul class="help-links">
+                    <li><a href="#" class="help-link">Failed Transactions</a></li>
+                    <li><a href="#" class="help-link">Delayed Payments</a></li>
+                    <li><a href="#" class="help-link">Account Access Issues</a></li>
+                    <li><a href="#" class="help-link">App or Website Problems</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Popular Articles -->
+        <div class="popular-articles">
+            <h2 class="section-title-center">Popular Articles</h2>
+            
+            <div class="article-cards">
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>How to Convert Airtime to M-Pesa</h3>
+                        <p>Learn how to quickly convert your airtime to M-Pesa cash with our step-by-step guide.</p>
+                    </div>
+                    <a href="#" class="article-link">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>How to Redeem Bonga Points</h3>
+                        <p>Convert your Safaricom Bonga Points to cash, airtime, or data with Kredoswift.</p>
+                    </div>
+                    <a href="#" class="article-link">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Why Is My Transaction Pending?</h3>
+                        <p>Understand the reasons for pending transactions and how to resolve them quickly.</p>
+                    </div>
+                    <a href="#" class="article-link">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Securing Your Kredoswift Account</h3>
+                        <p>Best practices for keeping your account and financial information secure.</p>
+                    </div>
+                    <a href="#" class="article-link">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Support -->
+        <div class="contact-support">
+            <div class="support-card">
+                <h2>Can't Find What You're Looking For?</h2>
+                <p>Our support team is available 24/7 to assist you with any questions or issues you may have.</p>
+                <div class="support-buttons">
+                    <a href="contact.html" class="btn btn-primary">Contact Support</a>
+                    <button class="btn btn-outline live-chat-btn">
+                        <i class="fas fa-comment-dots"></i> Live Chat
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>kredoswift</span>
+                    <p>Modern Digital Finance Solutions</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Legal</h4>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Support</h4>
+                        <a href="help.html" class="active">Help Center</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Kredoswift. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to Your Account</h3>
+                <span class="close-modal" id="closeLoginModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" class="modal-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="modal-input" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button class="btn btn-primary btn-block">Login</button>
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="social-login-buttons">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="switch-auth">
+                    <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create an Account</h3>
+                <span class="close-modal" id="closeSignupModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" class="modal-input" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" class="modal-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signupPhone">Phone Number</label>
+                    <input type="tel" id="signupPhone" class="modal-input" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" class="modal-input" placeholder="Create a password">
+                </div>
+                <button class="btn btn-primary btn-block">Sign Up</button>
+                <div class="social-login">
+                    <p>Or sign up with</p>
+                    <div class="social-login-buttons">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="switch-auth">
+                    <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Help article data (sample data for search functionality)
+        const helpArticles = [
+            {
+                title: "Creating an Account",
+                category: "Getting Started",
+                content: "Learn how to create your Kredoswift account in just a few simple steps.",
+                tags: ["account", "registration", "signup", "new user"]
+            },
+            {
+                title: "How to Convert Airtime to M-Pesa",
+                category: "Popular Articles",
+                content: "<div class='article-popup-content'><p>Converting airtime to M-Pesa is easy with Kredoswift. Follow these simple steps to get cash from your airtime credit:</p><ol class='article-steps'><li>Log in to your Kredoswift account</li><li>Select 'Convert Airtime' from the dashboard</li><li>Enter the phone number with airtime</li><li>Specify the amount you want to convert</li><li>Confirm the transaction details</li><li>Receive confirmation SMS and M-Pesa deposit</li></ol><div class='article-tip'><strong>Pro Tip:</strong> Conversion rates are updated daily. Check the rates before making large conversions to get the best value.</div><p>Our airtime to M-Pesa conversion is typically completed within 5-15 minutes during business hours.</p></div>",
+                tags: ["airtime", "mpesa", "conversion", "exchange", "cash"]
+            },
+            {
+                title: "How to Redeem Bonga Points",
+                category: "Popular Articles",
+                content: "<div class='article-popup-content'><p>Turn your Safaricom Bonga Points into cash, airtime, or data with these steps:</p><ol class='article-steps'><li>Log in to your Kredoswift account</li><li>Navigate to 'Bonga Points' section</li><li>Enter your Safaricom number</li><li>Specify how many points you want to redeem</li><li>Choose your preferred redemption option (cash, airtime, or data)</li><li>Confirm the details and submit</li></ol><div class='article-tip'><strong>Note:</strong> The minimum redemption is 50 Bonga Points. Current rate: 1 point = KES 0.30</div><p>Redemptions typically process within 30 minutes, with cash sent directly to your M-Pesa account.</p></div>",
+                tags: ["bonga", "points", "safaricom", "rewards", "redemption"]
+            },
+            {
+                title: "Why Is My Transaction Pending?",
+                category: "Popular Articles",
+                content: "<div class='article-popup-content'><p>Transactions may remain in 'pending' status for several reasons:</p><h4>Common Causes</h4><ul class='article-steps'><li>Network delays between mobile providers</li><li>System maintenance periods (usually scheduled at night)</li><li>Verification required for high-value transactions</li><li>Temporary holds due to security checks</li></ul><h4>What to Do</h4><ol class='article-steps'><li>Wait for 30 minutes - most transactions resolve automatically</li><li>Check your transaction history for updates</li><li>Ensure you've completed any verification steps</li><li>Contact support if pending for more than 2 hours</li></ol><div class='article-tip'><strong>Important:</strong> Never attempt to repeat a pending transaction as this may result in duplicate charges.</div></div>",
+                tags: ["pending", "transaction", "delay", "processing", "troubleshooting"]
+            },
+            {
+                title: "Securing Your Kredoswift Account",
+                category: "Popular Articles",
+                content: "<div class='article-popup-content'><p>Keep your account and financial information safe with these security best practices:</p><h4>Essential Security Measures</h4><ol class='article-steps'><li>Enable Two-Factor Authentication (2FA)</li><li>Use a strong, unique password (mix of letters, numbers, symbols)</li><li>Never share your OTP or verification codes with anyone</li><li>Update your app regularly</li><li>Log out from shared devices</li></ol><div class='article-tip'><strong>Security Alert:</strong> Kredoswift will never call or text asking for your password or full account details.</div><p>We recommend changing your password every 3 months and reviewing your account activity regularly.</p></div>",
+                tags: ["security", "protection", "password", "2fa", "safety"]
+            },
+            {
+                title: "Verifying Your Phone Number",
+                category: "Getting Started",
+                content: "How to verify your phone number to enhance security and enable all account features.",
+                tags: ["verification", "phone", "sms", "security"]
+            },
+            {
+                title: "Understanding Our Services",
+                category: "Getting Started",
+                content: "Overview of all services offered by Kredoswift and how they can benefit you.",
+                tags: ["services", "overview", "features"]
+            },
+            {
+                title: "First Transaction Guide",
+                category: "Getting Started",
+                content: "Step-by-step guide for completing your first transaction on Kredoswift.",
+                tags: ["transaction", "first time", "guide", "tutorial"]
+            },
+            {
+                title: "Converting Airtime to M-Pesa",
+                category: "Transactions",
+                content: "How to convert your airtime to M-Pesa cash instantly with competitive rates.",
+                tags: ["airtime", "mpesa", "conversion", "exchange"]
+            },
+            {
+                title: "Converting Bonga Points",
+                category: "Transactions",
+                content: "Convert your Safaricom Bonga Points to cash, airtime, or data with Kredoswift.",
+                tags: ["bonga", "points", "safaricom", "rewards"]
+            },
+            {
+                title: "Buying Discounted Airtime",
+                category: "Transactions",
+                content: "How to purchase airtime at discounted rates through our platform.",
+                tags: ["airtime", "discount", "purchase", "savings"]
+            },
+            {
+                title: "Transaction Fees Explained",
+                category: "Transactions",
+                content: "Detailed breakdown of all transaction fees across different services.",
+                tags: ["fees", "charges", "costs", "pricing"]
+            },
+            {
+                title: "Changing Your Password",
+                category: "Account & Security",
+                content: "How to securely change your password and best practices for password creation.",
+                tags: ["password", "security", "account", "change"]
+            },
+            {
+                title: "Two-Factor Authentication",
+                category: "Account & Security",
+                content: "Setting up and using two-factor authentication to secure your account.",
+                tags: ["2fa", "security", "authentication", "verification"]
+            },
+            {
+                title: "Managing Payment Methods",
+                category: "Account & Security",
+                content: "How to add, remove, and update payment methods on your account.",
+                tags: ["payment", "methods", "banking", "cards"]
+            },
+            {
+                title: "Privacy & Security Tips",
+                category: "Account & Security",
+                content: "Essential tips to keep your account and financial information secure.",
+                tags: ["privacy", "security", "tips", "protection"]
+            },
+            {
+                title: "Failed Transactions",
+                category: "Troubleshooting",
+                content: "Common reasons for failed transactions and how to resolve them.",
+                tags: ["failed", "error", "transaction", "problem"]
+            },
+            {
+                title: "Delayed Payments",
+                category: "Troubleshooting",
+                content: "What to do when payments are delayed and how to track their status.",
+                tags: ["delayed", "payment", "waiting", "pending"]
+            },
+            {
+                title: "Account Access Issues",
+                category: "Troubleshooting",
+                content: "Troubleshooting account login problems and recovering access.",
+                tags: ["login", "access", "locked", "recovery"]
+            },
+            {
+                title: "App or Website Problems",
+                category: "Troubleshooting",
+                content: "Solutions for common app and website technical issues.",
+                tags: ["app", "website", "technical", "issues"]
+            }
+        ];
+
+        // Search functionality
+        function performSearch(searchTerm) {
+            searchTerm = searchTerm.toLowerCase();
+            
+            // Filter articles based on search term
+            const results = helpArticles.filter(article => {
+                return (
+                    article.title.toLowerCase().includes(searchTerm) ||
+                    article.content.toLowerCase().includes(searchTerm) ||
+                    article.category.toLowerCase().includes(searchTerm) ||
+                    article.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+                );
+            });
+            
+            displaySearchResults(results, searchTerm);
+        }
+        
+        // Display search results
+        function displaySearchResults(results, searchTerm) {
+            if (results.length === 0) {
+                Swal.fire({
+                    title: 'No Results Found',
+                    text: `No articles match "${searchTerm}". Try different keywords.`,
+                    icon: 'info',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#6c5ce7'
+                });
+                return;
+            }
+            
+            let resultsHTML = `<div class="search-results-container">`;
+            
+            results.forEach(article => {
+                resultsHTML += `
+                    <div class="search-result-item" onclick="showArticleDetail('${article.title}')">
+                        <h4>${article.title}</h4>
+                        <span class="result-category">${article.category}</span>
+                        <p>${article.content}</p>
+                    </div>
+                `;
+            });
+            
+            resultsHTML += `</div>`;
+            
+            Swal.fire({
+                title: `Search Results for "${searchTerm}"`,
+                html: resultsHTML,
+                width: '600px',
+                confirmButtonText: 'Close',
+                confirmButtonColor: '#6c5ce7'
+            });
+        }
+        
+        // Show article detail
+        function showArticleDetail(title) {
+            const article = helpArticles.find(a => a.title === title);
+            
+            if (article) {
+                Swal.fire({
+                    title: article.title,
+                    html: `
+                        <div class="article-detail">
+                            <span class="article-category">${article.category}</span>
+                            <p>${article.content}</p>
+                            <div class="article-related">
+                                <h5>Related Topics</h5>
+                                <div class="article-tags">
+                                    ${article.tags.map(tag => `<span class="article-tag">${tag}</span>`).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    width: '600px',
+                    confirmButtonText: 'Close',
+                    confirmButtonColor: '#6c5ce7'
+                });
+            }
+        }
+
+        // Initialize search functionality
+        document.querySelector('.help-search-button').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.help-search-input').value.trim();
+            if (searchTerm) {
+                performSearch(searchTerm);
+            }
+        });
+        
+        // Allow search on Enter key press
+        document.querySelector('.help-search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const searchTerm = this.value.trim();
+                if (searchTerm) {
+                    performSearch(searchTerm);
+                }
+            }
+        });
+        
+        // Help link popups
+        document.querySelectorAll('.help-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const linkText = this.textContent;
+                const article = helpArticles.find(a => a.title === linkText);
+                
+                if (article) {
+                    showArticleDetail(article.title);
+                } else {
+                    Swal.fire({
+                        title: linkText,
+                        text: 'Detailed information for this topic will be available soon.',
+                        icon: 'info',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#6c5ce7'
+                    });
+                }
+            });
+        });
+        
+        // Popular Articles link popups
+        document.querySelectorAll('.article-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Get the article title from the parent article card
+                const articleCard = this.closest('.article-card');
+                const articleTitle = articleCard.querySelector('h3').textContent;
+                const article = helpArticles.find(a => a.title === articleTitle);
+                
+                if (article) {
+                    Swal.fire({
+                        title: article.title,
+                        html: article.content,
+                        width: '600px',
+                        showCloseButton: true,
+                        confirmButtonText: 'Got It',
+                        confirmButtonColor: '#6c5ce7',
+                        background: '#1a1c2d',
+                        color: '#fff'
+                    });
+                } else {
+                    Swal.fire({
+                        title: articleTitle,
+                        text: 'Detailed information for this article will be available soon.',
+                        icon: 'info',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#6c5ce7',
+                        background: '#1a1c2d',
+                        color: '#fff'
+                    });
+                }
+            });
+        });
+        
+        // Make entire article card clickable
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Don't trigger if the user clicked the arrow link (it has its own event handler)
+                if (!e.target.closest('.article-link')) {
+                    const articleTitle = this.querySelector('h3').textContent;
+                    const article = helpArticles.find(a => a.title === articleTitle);
+                    
+                    if (article) {
+                        Swal.fire({
+                            title: article.title,
+                            html: article.content,
+                            width: '600px',
+                            showCloseButton: true,
+                            confirmButtonText: 'Got It',
+                            confirmButtonColor: '#6c5ce7',
+                            background: '#1a1c2d',
+                            color: '#fff'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Live chat button
+        document.querySelector('.live-chat-btn').addEventListener('click', function() {
+            Swal.fire({
+                title: 'Live Chat',
+                text: 'Our live chat feature is coming soon! Please contact us via email or phone in the meantime.',
+                icon: 'info',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#6c5ce7',
+                background: '#1a1c2d',
+                color: '#fff'
+            });
+        });
+    </script>
+</body>
+</html>

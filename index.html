@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kredoswift | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Spinning Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            
+            <div class="spinner-container">
+                <div class="spinner">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                </div>
+                <div class="loading-text">Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <span>kredoswift</span>
+            </div>
+            <div class="menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="airtime.html">Buy Cheap Airtime</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="help.html">Help Center</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn">Login</button>
+                <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Mobile Sidebar Navigation -->
+            <div class="mobile-sidebar" id="mobile-sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <span>kredoswift</span>
+                    </div>
+                    <span class="close-sidebar">&times;</span>
+                </div>
+                <div class="sidebar-menu">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="airtime.html">Buy Cheap Airtime</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="help.html">Help Center</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="sidebar-auth">
+                    <button class="btn btn-outline" id="mobileLoginBtn">Login</button>
+                    <button class="btn btn-primary" id="mobileSignupBtn">Sign Up</button>
+                </div>
+
+            </div>
+            
+            <!-- Mobile Sidebar Overlay -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Your Airtime. Your Money. Your Way.</h1>
+                <p>Easily and securely convert airtime, Bonga points, and mobile money anytime, anywhere with our platform.</p>
+                <div class="phone-input-container">
+                    <div class="phone-input-wrapper">
+                        <span class="phone-prefix">+254</span>
+                        <input type="tel" class="phone-input" placeholder="Enter your phone number" maxlength="10" pattern="[0-9]*">
+                    </div>
+                    <button class="btn btn-primary phone-submit">Get Started <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="input-info">Ready to swap airtime for M-Pesa? Start by entering your number</div>
+                <div class="store-buttons">
+                    <a href="#" class="store-button play-store">
+                        <i class="fab fa-google-play store-icon"></i>
+                        <div class="store-info">
+                            <span class="store-get">GET IT ON</span>
+                            <span class="store-name">Play Store</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="store-button app-store">
+                        <i class="fab fa-apple store-icon"></i>
+                        <div class="store-info">
+                            <span class="store-get">GET IT ON</span>
+                            <span class="store-name">App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="glowing-circle"></div>
+                <div class="hero-illustration">
+                    <div class="image-container">
+                        <img src="images/mobile-money.jpg" alt="Mobile Money Transfer" class="hero-image-content">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon mpesa-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Airtime to M-Pesa</h3>
+                    <p>Convert your unused airtime to M-Pesa cash instantly</p>
+                 
+                   
+                    <a href="#" class="service-link">Convert Now <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <span class="beta-label corner-beta">BETA</span>
+                    <div class="service-icon airtel-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Airtel Money</h3>
+                    <p>Exchange airtime for Airtel Money with the best rates</p>
+                 
+                 
+                    <a href="#" class="service-link">Convert Now <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <span class="beta-label corner-beta">BETA</span>
+                    <div class="service-icon bonga-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Bonga Points</h3>
+                    <p>Turn your Bonga points into cash or airtime effortlessly</p>
+                    
+               
+                    <a href="#" class="service-link">Convert Now <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Select Service</h3>
+                        <p>Choose the conversion service you need</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Enter Amount</h3>
+                        <p>Specify how much you want to convert</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Confirm Details</h3>
+                        <p>Verify your information and conversion details</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Receive Cash</h3>
+                        <p>Get your Money after 10 - 40 minutes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-value" data-count="200">0</div>
+                <div class="stat-label">Happy Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" data-count="150">0</div>
+                <div class="stat-label">Transactions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" data-count="70">0</div>
+                <div class="stat-label">Success Rate %</div>
+            </div>
+        </section>
+
+        <!-- Service Selection Modal -->
+        <div class="modal" id="service-selection-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Select Service</h3>
+                    <span class="close-modal" id="close-service-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="service-selection">
+                        <div class="service-option" data-service="mpesa">
+                            <div class="service-icon mpesa-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <h4>M-Pesa</h4>
+                            <p>Convert airtime to M-Pesa cash</p>
+                        </div>
+                        <div class="service-option" data-service="airtel">
+                            <div class="service-icon airtel-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Airtel Money</h4>
+                            <p>Exchange airtime for Airtel Money</p>
+                        </div>
+                        <div class="service-option" data-service="bonga">
+                            <div class="service-icon bonga-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <h4>Bonga Points</h4>
+                            <p>Convert Bonga points to cash</p>
+                        </div>
+                    </div>
+                    
+                    <div class="amount-selection" style="display: none;">
+                        <h4>Select Amount</h4>
+                        <div class="amount-options">
+                            <button class="amount-option" data-amount="50">KES 50</button>
+                            <button class="amount-option" data-amount="100">KES 100</button>
+                            <button class="amount-option" data-amount="200">KES 200</button>
+                            <button class="amount-option" data-amount="500">KES 500</button>
+                            <button class="amount-option" data-amount="1000">KES 1000</button>
+                        </div>
+                        <div class="custom-amount">
+                            <input type="number" id="custom-amount" placeholder="Enter custom amount" min="50">
+                            <button id="proceed-with-amount" class="btn btn-primary">Proceed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conversion Modal -->
+        <div class="modal" id="conversion-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title">Convert Airtime</h3>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form id="conversion-form">
+                        <div class="form-group">
+                            <label for="phone-number">Phone Number</label>
+                            <div class="phone-input-wrapper modal-input">
+                                <span class="phone-prefix">+254</span>
+                                <input type="tel" id="phone-number" placeholder="Enter your phone number" maxlength="10" pattern="[0-9]*">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="airtime-amount" id="amount-label">Airtime Amount (KES)</label>
+                            <input type="number" id="airtime-amount" placeholder="Enter amount (min 50)" min="50" step="1">
+                        </div>
+                        <div class="form-info" id="rate-info">
+                            <p>Conversion rate: <span id="conversion-rate">70%</span></p>
+                            <p>You will receive: <span id="receive-amount">KES 0</span></p>
+                            <p id="recipient-info" style="display: none;">Recipient number: <span id="recipient-number"></span></p>
+                        </div>
+                        <div class="form-info dialing-info" id="dialing-info" style="display: none;">
+                            <p>To sambaza Airtime, please dial: <span id="dialing-code"></span> to Get <span id="service-type">Mpesa</span> instantly!</p>
+                            <div class="action-buttons">
+                                <a href="tel:" class="btn btn-primary dial-button" id="dial-button"><i class="fas fa-phone"></i> Dial</a>
+                                <button type="button" class="btn btn-outline copy-button" id="copy-button"><i class="fas fa-copy"></i> Copy</button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Convert Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Access -->
+        <section class="quick-access">
+            <h2>Quick Access</h2>
+            <div class="quick-links">
+                <a href="#" class="quick-link-card">
+                    <div class="quick-link-icon"><i class="fas fa-history"></i></div>
+                    <div class="quick-link-text">Transaction History</div>
+                </a>
+                <a href="help.html" class="quick-link-card">
+                    <div class="quick-link-icon"><i class="fas fa-headset"></i></div>
+                    <div class="quick-link-text">Customer Support</div>
+                </a>
+                <a href="faq.html" class="quick-link-card">
+                    <div class="quick-link-icon"><i class="fas fa-question-circle"></i></div>
+                    <div class="quick-link-text">FAQ</div>
+                </a>
+                <a href="airtime.html" class="quick-link-card">
+                    <div class="quick-link-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="quick-link-text">Buy Airtime</div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>kredoswift</span>
+                    <p>Modern Digital Finance Solutions</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                        
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Legal</h4>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Support</h4>
+                        <a href="help.html">Help Center</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Kredoswift. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to Your Account</h3>
+                <span class="close-modal" id="closeLoginModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" class="modal-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="modal-input" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button class="btn btn-primary btn-block">Login</button>
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="social-login-buttons">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="switch-auth">
+                    <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create an Account</h3>
+                <span class="close-modal" id="closeSignupModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" class="modal-input" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" class="modal-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signupPhone">Phone Number</label>
+                    <input type="tel" id="signupPhone" class="modal-input" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" class="modal-input" placeholder="Create a password">
+                </div>
+                <button class="btn btn-primary btn-block">Sign Up</button>
+                <div class="social-login">
+                    <p>Or sign up with</p>
+                    <div class="social-login-buttons">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="switch-auth">
+                    <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <!-- Spinning Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="spinner-container">
+                <div class="spinner">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                </div>
+                <div class="loading-text">Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <span>kredoswift</span>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="airtime.html">Buy Cheap Airtime</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="help.html">Help Center</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn">Login</button>
+                <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Mobile Sidebar Navigation -->
+            <div class="mobile-sidebar" id="mobile-sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <span>kredoswift</span>
+                    </div>
+                    <span class="close-sidebar">&times;</span>
+                </div>
+                <div class="sidebar-menu">
+                    <a href="index.html">Home</a>
+                    <a href="airtime.html">Buy Cheap Airtime</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="help.html">Help Center</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="sidebar-auth">
+                    <button class="btn btn-outline" id="mobileLoginBtn">Login</button>
+                    <button class="btn btn-primary" id="mobileSignupBtn">Sign Up</button>
+                </div>
+            </div>
+            
+            <!-- Mobile Sidebar Overlay -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </nav>
+
+        <!-- Careers Hero Section -->
+        <section class="careers-hero">
+            <h1>Join Our Team</h1>
+            <p>Be part of a dynamic team reshaping the future of digital finance in Africa. At Kredoswift, we're looking for talented individuals who are passionate about innovation and making a difference.</p>
+            <button class="btn btn-primary">View All Positions</button>
+        </section>
+
+        <!-- Open Positions Section -->
+        <section class="careers-section">
+            <h2 class="section-title-center">Open Positions</h2>
+            <div class="careers-grid">
+                <div class="career-card">
+                    <h3>Senior Full Stack Developer</h3>
+                    <div class="career-details">
+                        <div class="career-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                        <div class="career-detail">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="career-detail">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Engineering</span>
+                        </div>
+                    </div>
+                    <div class="career-description">
+                        <p>We're looking for an experienced Full Stack Developer to help build and maintain our core financial platform. You'll work on challenging problems and help shape the future of digital finance.</p>
+                    </div>
+                    <button class="btn btn-primary apply-btn">Apply Now</button>
+                </div>
+                
+                <div class="career-card">
+                    <h3>Digital Marketer</h3>
+                    <div class="career-details">
+                        <div class="career-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                        <div class="career-detail">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="career-detail">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Marketing</span>
+                        </div>
+                    </div>
+                    <div class="career-description">
+                        <p>We’re looking for a results-driven Digital Marketer to manage online campaigns, optimize SEO/SEM strategies, and boost brand awareness across all digital platforms.</p>
+                        
+                    </div>
+                    <button class="btn btn-primary apply-btn">Apply Now</button>
+                </div>
+                
+                
+                <div class="career-card">
+                    <h3>Graphics Designer</h3>
+                    <div class="career-details">
+                        <div class="career-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Remote</span>
+                        </div>
+                        <div class="career-detail">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="career-detail">
+                            <i class="fas fa-palette"></i>
+                            <span>Creative</span>
+                        </div>
+                    </div>
+                    <div class="career-description">
+                        <p>We’re seeking a talented Graphics Designer with a keen eye for aesthetics and detail. You'll be responsible for creating compelling visual assets for web, social media, marketing, and branding campaigns.</p>
+                    </div>
+                    <button class="btn btn-primary apply-btn">Apply Now</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="values-section">
+            <h2 class="section-title-center">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We encourage creative thinking and bold ideas that challenge the status quo in financial technology.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of diverse teams working together to solve complex problems.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We uphold the highest standards of ethics and transparency in all our operations.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Customer Focus</h3>
+                    <p>Our customers are at the heart of everything we do, driving our decisions and innovations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>kredoswift</span>
+                    <p>Modern Digital Finance Solutions</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Legal</h4>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Support</h4>
+                        <a href="help.html">Help Center</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Kredoswift. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- CV Upload Modal -->
+    <div class="modal" id="cvUploadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Submit Your Application</h3>
+                <span class="close-modal" id="closeCvModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="cv-upload">Upload Your CV</label>
+                    <input type="file" id="cv-upload" accept=".pdf,.doc,.docx" required>
+                </div>
+                <button class="btn btn-primary btn-block" id="submitApplication">Send</button>
+                <p class="email-note">For faster review, kindly email your CV directly to our careers team at <a href="mailto:careers@kredoswift.co.ke">careers@kredoswift.co.ke</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to Your Account</h3>
+                <span class="close-modal" id="closeLoginModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" class="modal-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="modal-input" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button class="btn btn-primary btn-block">Login</button>
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="social-login-buttons">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="switch-auth">
+                    <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create an Account</h3>
+                <span class="close-modal" id="closeSignupModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" class="modal-input" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" class="modal-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signupPhone">Phone Number</label>
+                    <input type="tel" id="signupPhone" class="modal-input" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" class="modal-input" placeholder="Create a password">
+                </div>
+                <button class="btn btn-primary btn-block">Sign Up</button>
+                <div class="social-login">
+                    <p>Or sign up with</p>
+                    <div class="social-login-buttons">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="switch-auth">
+                    <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
