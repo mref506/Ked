@@ -76,7 +76,7 @@
         // Fetch and display service configurations
         async function loadServiceConfigs() {
             try {
-                const response = await fetch('');
+                const response = await fetch('/api/get-service-config');
                 const configs = await response.json();
                 
                 const container = document.getElementById('service-configs');
